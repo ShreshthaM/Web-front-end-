@@ -1,0 +1,56 @@
+<html>
+<head>
+<style type="text/css">
+ h1,h2 {
+ color: yellow
+ }
+ input[type=button], input[type=submit], input[type=reset] {
+  background-color: #B0C4DE;
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+ 
+ </style>
+<title> FEEDBACK FORM </title>
+<script type="text/javascript">
+function f1()
+{
+var name = document.getElementById("fname").value;
+var mobile = document.getElementById("mob").value;
+var rating = document.getElementById("rate").value;
+
+if(name=="" || mobile=="")
+{
+alert("please enter all the details");
+}
+
+else
+
+if (mobile>9999999999 || mobile<7000000000)
+{
+alert("invalid mobile number");
+}
+else 
+alert("Thank you");
+
+}
+</script>
+</head>
+
+<body background="C:\Users\shreshtha\Pictures\kk.jpg">
+<form>
+<center> <h1> FEEDBACK FORM </h1></center>
+<center><h2>NAME:</h2> <input type="text" id="fname" /> <br></center>
+
+<center><h2>MOBILE NO:</h2> <input type="number" id="mob" /> <br></center>
+<center><h2>RATE :</h2> <input type="number" id="rate"/> <br /></center>
+<center><h2>ADDITIONAL COMMENTS :</h2> <textarea id="com" rows="10" cols="50" > </textarea> <br></center>
+<br><br>
+<center><input type="button" value="submit" onclick="f1()" name="submit" />  <br></center>
+</form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+<style type="text/css" media="all">
+h1,h2{
+color:white;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #B0C4DE;
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: 3px 1px;
+  cursor: pointer;
+}
+
+</style>
+<title>
+Book In
+</title>
+<script type="text/javascript">
+function f2()
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var name = document.getElementById("fname").value;
+var mobile = document.getElementById("m").value;
+var mail = document.getElementById("mail").value;
+var pass= document.getElementById("p").value;
+var cpass=document.getElementById("p1").value;
+
+if(name=="" || mobile==""|| mail==""|| pass==""||cpass=="")
+
+{alert("please enter all the details");}
+
+else if(mobile.length<10 || mobile.length>10)
+
+alert("invalid mobile number");
+else if (mobile>9999999999 || mobile<7000000000)
+
+alert("invalid mobile number");
+else if(pass.length<6)
+alert("please enter appropriate password");
+else if (pass!=cpass)
+alert("password not matching");
+
+else {if(mail.match(mailformat))
+{
+}
+else
+{
+alert("You have entered an invalid email address!");}
+}
+
+}
+
+
+</script>
+</head >
+
+<body background= "C:\Users\shreshtha\Pictures\ww.jpg" >
+<font size="4.75" color="white">
+<center> <h1>  TO BOOK A ROOM YOU NEED TO SIGN IN</h1> </center>
+
+
+Name: <input type="text" name="name" id="fname" />
+<br><BR>
+Email id: <input type="text" name="email" id="mail"placeholder="xyz@gmail.com" />
+<br><br>
+Mobile number: <input type="number" name="mn" id="m"  />
+<br><br>
+Password: <input type="password" name="pwd" id="p" placeholder="must be atleast 6 characters"  />
+<br><br>
+Confirm Password:<input type="password" name="pwd1" id="p1" /> 
+<br><br>
+Date of Birth: <input type="date" name="x"  /> 
+<br><br>Username:<input name="l" placeholder="must contain a digit" />
+
+
+By proceeding, you agree with our Terms of Service & Privacy Policy
+<br>
+<br>
+<form> 
+ <input type="submit" name="x" value="Sign in" onclick="f2()"style="color:black">
+ </form>
+ <b>OR</b>
+ <br>
+<form action="https://www.facebook.com/" target="_blank">
+ <input type="submit" name="x" value="Connect with Facebook"style="color:black" >
+ </form>
+ <form action="https://accounts.google.com/ServiceLogin"target="_blank">
+ <input type="submit" name="x" value="Connect with Gmail"style="color:black" >
+ <br>
+ </font>
+</body>
+</html>
